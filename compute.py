@@ -3,18 +3,24 @@ import sys
 
 NUM_THREADS = int(sys.argv[1])
 threads = []
-def print_square(*nums):
-    # function to print cube of given num
-    for num in nums:
-       result = (num * num )
-       print("%s Square: {}" .format(result) % threading.currentThread().ident)
- 
- 
+def calc_pi(itterations):
+    # Leibniz’s formula
+    k = 1
+    s = 0
+    for i in range(itterations):
+        # even index elements are positive
+        if i % 2 == 0:
+            s += 4/k
+        else:
+            s -= 4/k
+        # denominator is odd
+        k += 2
+    print("(%i) Result: %s" % (threading.current_thread().ident, s))
+
 if __name__ =="__main__":
     # creating thread
-    nums = list(range(1, 1000000)) 
     for t in range(1, NUM_THREADS):
-        threads.append(threading.Thread(target=print_square, args=nums))
+        threads.append(threading.Thread(target=calc_pi, args=(100000000,)))
 
     for t in threads:
         t.start()
