@@ -12,8 +12,8 @@ func calc_pi(){
     defer wg.Done()
     var k float64 = 1
     var s float64 = 0
-
-    for i := 0; i < 10000000000; i++ {
+    var i int64
+    for i = 0; i < 10000000000; i++ {
         if i % 2 == 0{
             s = s + 4/k
         } else {
