@@ -8,12 +8,10 @@ def calc_pi(itterations):
     k = 1
     s = 0
     for i in range(itterations):
-        # even index elements are positive
         if i % 2 == 0:
             s += 4/k
         else:
             s -= 4/k
-        # denominator is odd
         k += 2
     print("(%i) Result: %s" % (threading.current_thread().ident, s))
 
