@@ -33,4 +33,5 @@ patat:
 
 [python-doc](https://docs.python.org/3/c-api/init.html#thread-state-and-the-global-interpreter-lock)
 [https://realpython.com/python-gil/](https://realpython.com/python-gil/)
+[mt mp](https://towardsdatascience.com/multithreading-and-multiprocessing-in-10-minutes-20d9b3c6a867)
 
