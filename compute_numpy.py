@@ -37,6 +37,7 @@ class MultithreadedRNG:
     def __del__(self):
         self.executor.shutdown(False)
 
-mrng = MultithreadedRNG(1000000000, seed=12345)
-mrng.fill()
-print(mrng.values)
+for g in range(100):
+    mrng = MultithreadedRNG(10000000, seed=12345+g, threads=2)
+    mrng.fill()
+    print(mrng.values)

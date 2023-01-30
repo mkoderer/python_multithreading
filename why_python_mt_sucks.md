@@ -35,3 +35,4 @@ patat:
 [https://realpython.com/python-gil/](https://realpython.com/python-gil/)
 [mt mp](https://towardsdatascience.com/multithreading-and-multiprocessing-in-10-minutes-20d9b3c6a867)
 
+[numpy](https://stackoverflow.com/questions/36479159/why-are-numpy-calculations-not-affected-by-the-global-interpreter-lock/36480941#36480941)
